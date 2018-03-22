@@ -1,6 +1,6 @@
 package kz.yakovlev.test.gui.action;
 
-import kz.yakovlev.test.runner.GlobalProperties;
+import kz.yakovlev.test.gui.runner.GlobalProperties;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeDriverService;

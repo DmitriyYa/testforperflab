@@ -1,4 +1,4 @@
-package kz.yakovlev.test.runner;
+package kz.yakovlev.test.gui.runner;
 
 import org.openqa.selenium.WebDriver;
 
