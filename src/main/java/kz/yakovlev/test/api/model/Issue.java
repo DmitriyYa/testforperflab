@@ -3,59 +3,110 @@ package kz.yakovlev.test.api.model;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+import java.util.List;
+
 public class Issue {
 
-    @SerializedName("project")
+    @SerializedName("fields")
     @Expose
-    private Project project;
+    private Fields fields;
 
-    @SerializedName("summary")
+    @SerializedName("id")
     @Expose
-    private String summary;
+    private String id;
 
-    @SerializedName("description")
+    @SerializedName("key")
     @Expose
-    private String description;
+    private String key;
+
+    @SerializedName("expand")
+    @Expose
+    private String expand;
+
+    @SerializedName("transitions")
+    @Expose
+    private List<Transition> transitions = null;
+
+    @SerializedName("self")
+    @Expose
+    private String self;
 
 
-    public Issue(Project project, String summary, String description, Issuetype issuetype) {
-        this.project = project;
-        this.summary = summary;
-        this.description = description;
-        this.issuetype = issuetype;
+    public Issue() {
     }
 
-    public Project getProject() {
-        return project;
+    public Issue(Fields fields) {
+        super();
+        this.fields = fields;
     }
 
-    public void setProject(Project project) {
-        this.project = project;
+    public Issue(String expand, List<Transition> transitions) {
+        super();
+        this.expand = expand;
+        this.transitions = transitions;
     }
 
-    public String getSummary() {
-        return summary;
+    public String getId() {
+        return id;
     }
 
-    public void setSummary(String summary) {
-        this.summary = summary;
+    public void setId(String id) {
+        this.id = id;
     }
 
-    public String getDescription() {
-        return description;
+    public String getKey() {
+        return key;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setKey(String key) {
+        this.key = key;
     }
 
-    public Issuetype getIssuetype() {
-        return issuetype;
+    public String getSelf() {
+        return self;
     }
 
-    public void setIssuetype(Issuetype issuetype) {
-        this.issuetype = issuetype;
+    public void setSelf(String self) {
+        this.self = self;
     }
 
-    private Issuetype issuetype;
+    public Fields getFields() {
+        return fields;
+    }
+
+    public void setFields(Fields fields) {
+        this.fields = fields;
+    }
+
+    public Issue withFields(Fields fields) {
+        this.fields = fields;
+        return this;
+    }
+
+    public String getExpand() {
+        return expand;
+    }
+
+    public void setExpand(String expand) {
+        this.expand = expand;
+    }
+
+    public Issue withExpand(String expand) {
+        this.expand = expand;
+        return this;
+    }
+
+    public List<Transition> getTransitions() {
+        return transitions;
+    }
+
+    public void setTransitions(List<Transition> transitions) {
+        this.transitions = transitions;
+    }
+
+    public Issue withTransitions(List<Transition> transitions) {
+        this.transitions = transitions;
+        return this;
+    }
+
 }

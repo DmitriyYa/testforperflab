@@ -30,8 +30,9 @@ public class Issuetype {
     private Boolean subtask;
 
 
-//    public Issuetype() {
-//    }
+    public Issuetype(String id) {
+        this.id = id;
+    }
 
     public Issuetype(String self, String id, String description, String iconUrl, String name, Boolean subtask) {
         super();
